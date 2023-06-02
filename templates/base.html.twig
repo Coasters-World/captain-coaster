@@ -1,145 +1,142 @@
 <!DOCTYPE html>
-<html lang="{{ app.request.get('_locale') }}">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}{{ 'app.title.default'|trans }}{% endblock %} • {{ 'app.name'|trans }}</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
-  <link rel="mask-icon" href="{{ asset('safari-pinned-tab.svg') }}" color="#2b5797">
-  <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
-  <meta name="apple-mobile-web-app-title" content="{{ 'app.name'|trans }}">
-  <meta name="application-name" content="{{ 'app.name'|trans }}">
-  <meta name="msapplication-TileColor" content="#2b5797">
-  <meta name="theme-color" content="#2b5797">
-  <link rel="manifest" href="{{ asset('manifest.json') }}">
-  {% block header %}{% endblock %}
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-  {{ encore_entry_link_tags('app') }}
-  {% block stylesheets %}{% endblock %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{{ 'app.title.default'|trans }}{% endblock %} • {{ 'app.name'|trans }}</title>
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+
 </head>
-<body class="navbar-top {% if openedSidebar is not defined %}sidebar-xs{% endif %}">
-<!-- main navbar -->
-{{ include('navbar.html.twig') }}
-<!-- /main navbar -->
-<!-- page container -->
-<div class="page-container">
-  <!-- page content -->
-  <div class="page-content">
-    <!-- main sidebar -->
-    {{ include('sidebar.html.twig') }}
-    <!-- /main sidebar -->
-    <!-- main sidebar -->
-    {% block secondary_sidebar %}{% endblock %}
-    <!-- /main sidebar -->
-    <!-- main content -->
-    <div class="content-wrapper">
-      {% block wide_body %}
-        <!-- page header -->
-        {{ include(
-          'page_header.html.twig',
-          {'title': title|default('Bienvenue !'), 'subTitle': subTitle|default(null)}
-        ) }}
-        <!-- /page header -->
-        <!-- Content area -->
-        <div class="content">
-          {{ include('flashes.html.twig') }}
 
-          {% block body %}{% endblock %}
+<body>
 
-          {{ include('footer.html.twig') }}
+<!-- Main navbar -->
+<div class="navbar navbar-dark navbar-expand-lg navbar-static border-bottom border-bottom-white border-opacity-10">
+    <div class="container-fluid">
+        <div class="d-flex d-lg-none me-2">
+            <button type="button" class="navbar-toggler sidebar-mobile-main-toggle rounded">
+                <i class="fa fa-bars"></i>
+            </button>
         </div>
-      {% endblock %}
-      <!-- /content area -->
+
+        <div class="navbar-brand">
+            <a href="{{ path('bdd_index') }}" class="d-inline-flex align-items-center">
+                <img src="{{ asset('build/images/logo.png') }}" alt="Captain Coaster">
+                <img src="../../../assets/images/logo_text_light.svg" class="d-none d-sm-inline-block h-16px ms-3" alt="">
+            </a>
+        </div>
+
+        <div class="d-lg-none ms-2">
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-mobile" aria-expanded="false">
+                <i class="ph-squares-four"></i>
+            </button>
+        </div>
+
+        <div class="navbar-collapse order-2 order-lg-1 collapse" id="navbar-mobile" style="">
+            <ul class="navbar-nav mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a href="#" class="navbar-nav-link rounded">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="navbar-nav-link rounded dropdown-toggle" data-bs-toggle="dropdown">Dropdown</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Action</a>
+                        <a href="#" class="dropdown-item">Another action</a>
+                        <a href="#" class="dropdown-item">Something else here</a>
+                        <a href="#" class="dropdown-item">One more line</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="nav gap-sm-2 order-1 order-lg-2 ms-auto">
+            <li class="nav-item">
+                <a href="#" class="navbar-nav-link navbar-nav-link-icon rounded">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="badge bg-yellow text-black position-absolute top-0 end-0 translate-middle-top zindex-1 rounded-pill mt-1 me-1">2</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="navbar-nav-link navbar-nav-link-icon rounded">
+                    <i class="ph-chats"></i>
+                </a>
+            </li>
+            <li class="nav-item nav-item-dropdown-lg dropdown">
+                <a href="#" class="navbar-nav-link align-items-center rounded p-1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="status-indicator-container">
+                        <img src="https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10213633453100730&height=50&width=50&ext=1686628803&hash=AeS3P2ITC7Hw2R7ESes" class="w-32px h-32px rounded" alt="">
+                        <span class="status-indicator bg-success"></span>
+                    </div>
+                    <span class="d-none d-lg-inline-block mx-lg-2">Victoria</span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-end">
+                    <a href="#" class="dropdown-item">Action</a>
+                    <a href="#" class="dropdown-item">Another action</a>
+                    <a href="#" class="dropdown-item">Something else here</a>
+                    <a href="#" class="dropdown-item">One more line</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- /main navbar -->
+
+
+<!-- Page content -->
+<div class="page-content">
+
+    <!-- Main sidebar -->
+    {% block sidebar %}{% endblock %}
+    <!-- /main sidebar -->
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+
+        <!-- Inner content -->
+        <div class="content-inner">
+
+            <!-- Page header -->
+            {% block header %}{% endblock %}
+            <!-- /page header -->
+
+            <!-- Content area -->
+            {% block content %}{% endblock %}
+            <!-- /content area -->
+
+            <!-- Footer -->
+            <div class="navbar navbar-sm navbar-footer border-top">
+                <div class="container-fluid">
+                    <span class="fs-xs">2017-{{ 'now'|date('Y') }} Crafted with <i class="fa-regular fa-heart fs-sm"></i> by French coaster enthusiasts</span>
+
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="{{ path('default_privacy_policy') }}" class="navbar-nav-link navbar-nav-link-icon rounded" target="_blank">
+                                <div class="d-flex align-items-center mx-md-1">
+                                    <i class="fa-regular fa-circle-question fs-sm"></i>
+                                    <span class="d-none d-md-inline-block ms-2">{{ 'footer.terms'|trans }}</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /footer -->
+
+        </div>
+        <!-- /inner content -->
+
     </div>
     <!-- /main content -->
-  </div>
-  <!-- /page content -->
 </div>
-<!-- /page container -->
-<!-- Core JS files -->
-{{ encore_entry_script_tags('app') }}
-<script type="text/javascript" src="{{ asset('js/core/libraries/jquery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/core/libraries/bootstrap.min.js') }}"></script>
-<!-- /core JS files -->
-<!-- Theme JS files -->
-<script type="text/javascript" src="{{ asset('js/core/libraries/jquery_ui/interactions.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/core/app.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/core/layout_fixed_custom.js') }}"></script>
-<!-- /theme JS files -->
-<script type="text/javascript" src="{{ asset('js/plugins/typeahead/typeahead.bundle.min.js') }}"></script>
-<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
-<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
-<script type="text/javascript">
-  // used for rating
-  var locale = '{{ app.request.locale }}';
-  var charMap = {
-    'a': /[àáâãå]/gi,
-    'c': /[ç]/gi,
-    'e': /[èéêë]/gi,
-    'i': /[ïí]/gi,
-    'o': /[ôóøö]/gi,
-    'oe': /[œ]/gi,
-    'u': /[üú]/gi,
-    'n': /[ñ]/gi,
-    'ss': /[ß]/gi
-  };
-  var normalize = function (str) {
-    $.each(charMap, function (normalized, regex) {
-      str = str.replace(regex, normalized);
-    });
-    return str;
-  };
-  var queryTokenizer = function (q) {
-    var normalized = normalize(q);
-    return Bloodhound.tokenizers.nonword(normalized);
-  };
-  var dataSource = new Bloodhound({
-    datumTokenizer: Bloodhound.tokenizers.obj.nonword('no'),
-    queryTokenizer: queryTokenizer,
-    prefetch: {
-      url: Routing.generate('ajax_main_search', {'_locale': '{{ app.request.locale }}'}),
-      cache: true,
-      ttl: 600000,
-      transform: function (obj) {
-        return obj.map(
-          function (x) {
-            return {no: normalize(x.n), n: x.n, r: x.r, s: x.s}
-          }
-        )
-      }
-    }
-  });
-  $('#search-coaster').typeahead(
-      {
-        highlight: true,
-        hint: true,
-        autoselect: true,
-      }, {
-        display: 'n',
-        source: dataSource.ttAdapter(),
-        limit: 7,
-      }).bind('typeahead:select', function(ev, suggestion) {
-    window.location.href = Routing.generate(
-        suggestion.r,
-        {'slug': suggestion.s, '_locale': '{{ app.request.locale }}'},
-    );
-  });
-</script>
-{% block javascripts %}{% endblock %}
-{% if app.environment != 'dev' %}
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M2S96P7YEW"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-M2S96P7YEW');
-</script>
-{% endif %}
+<!-- /page content -->
 </body>
 </html>
-

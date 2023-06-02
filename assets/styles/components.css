@@ -1,0 +1,963 @@
+@charset "UTF-8";
+/* ------------------------------------------------------------------------------
+ *
+ *  # Components
+ *
+ *  Components import. Ordering matters. See _config.scss for more options
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Global configuration
+ *
+ *  Here you can change main theme, enable or disable certain components and
+ *  optional styles. This allows you to include only components that you need.
+ *
+ *  'true'  - enables component and includes it to main CSS file.
+ *  'false' - disables component and excludes it from main CSS file.
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Custom Limitless functions
+ *
+ *  Utility mixins and functions for evalutating source code across our variables, maps, and mixins.
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Custom template mixins
+ *
+ *  All custom mixins are prefixed with "ll-" to avoid conflicts
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Additional variables
+ *
+ *  Mainly 3rd party libraries and additional variables for default
+ *  Bootstrap components.
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Select2 selects
+*
+*  Styles for select2.js - custom select plugin
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Bootstrap multiselect
+*
+*  Styles for multiselect.js - custom multiple select plugin
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Autocomplete
+*
+*  Styles for autocomplete.min.js - input suggestion engine
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Form Validation
+*
+*  Styles for validate.min.js - jQuery plugin for simple clientside form validation
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Tokenfield component
+*
+*  Styles for tokenfield.min.js - Input field with tagging/token/chip capabilities
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Dual listbox
+*
+*  Styles for dual-listbox.min.js - A responsive dual listbox widget
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Steps wizard
+*
+*  Styles for steps.min.js - An all-in-one wizard plugin that is extremely flexible, compact and feature-rich
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Quill editor
+*
+*  Styles for quill.min.js - super simple WYSIWYG Editor
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # CKEditor editor
+*
+*  Styles for CKEditor Classic, Document and Balloon
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Trumbowyg editor
+*
+*  Styles for trumbowyg.min.js - a lightweight WYSIWYG editor
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Ace code editor
+*
+*  Styles Ace - an embeddable code editor written in JavaScript
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Daterange picker
+*
+*  Date range picker component for Bootstrap
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Date picker
+*
+*  Vanilla JS date picker with decade, year, month and day selection
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Spectrum color picker
+*
+*  Flexible and powerful jQuery colorpicker library
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Plupload multiple file uploader
+ *
+ *  Styles for plupload.min.js - multi runtime single and multiple file uploader
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Bootstrap file input
+ *
+ *  Styles for fileinput.min.js - an enhanced HTML 5 file input for Bootstrap
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Dropzone file uploader
+ *
+ *  Styles for dropzone.min.js - open source library that provides drag’n’drop file uploads with image previews
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Noty notifications
+*
+*  Styles for noty.min.js - A dependency-free notification library
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Sweet Alerts component
+*
+*  Styles for sweet_alert.min.js - notification library
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # NoUI slider
+ *
+ *  Styles for nouislider.min.js - range slider plugin
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # ION Range Slider
+*
+*  Styles for ion_rangeslider.min.js - range slider plugin
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Prism
+ *
+ *  Styles for prism.min.js - lightweight, extensible syntax highlighter
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Dragula - drag and drop library
+ *
+ *  Styles for Dragula Drag and drop plugin
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Floating action buttons
+*
+*  Styles for fab.min.js - material design floating action button with menu
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Fancytree
+*
+*  Styles for fancytree_all.min.js - tree plugin for jQuery
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # FullCalendar
+ *
+ *  Styles for fullcalendar JS files - JavaScript event calendar
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Image cropper
+ *
+ *  Styles for cropper.min.js - a simple jQuery image cropping plugin
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # GLightbox - lightbox extension
+ *
+ *  Styles for glightbox.min.js - Mac-style "lightbox" plugin
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Datatables library
+ *
+ *  Add advanced interaction controls to any HTML table
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Datatables library
+ *
+ *  Add advanced interaction controls to any HTML table
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Columns reorder
+ *
+ *  Easily modify the column order of a table through drop-and-drag of column headers
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Row Reorder extension
+ *
+ *  RowReorder adds the ability for rows in a DataTable to be reordered through
+ *  user interaction with the table.
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Fixed columns
+ *
+ *  Extension that "freezes" in place the left most columns in a scrolling DataTable
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Autofill extension
+ *
+ *  Spreadsheets such as Excel and Google Docs have a very handy data duplication
+ *  option of an auto fill tool
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Select extension
+ *
+ *  Adds item selection capabilities to a DataTable
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Buttons extension
+ *
+ *  The Buttons extension for DataTables provides a common set of options, API
+ *  methods and styling to display buttons that will interact with a DataTable
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Key Table extension
+ *
+ *  KeyTable provides Excel like cell navigation on any table. Events (focus, blur,
+ *  action etc) can be assigned to individual cells, columns, rows or all cells.
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Datatables Scroller
+ *
+ *  Drawing the rows required for the current display only, for fast operation
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Responsive extension
+ *
+ *  Optimise the table's layout for different screen sizes through the dynamic
+ *  insertion and removal of columns from the table
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Maps
+*
+*  Common styles for all maps
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # ECharts maps
+*
+*  Custom styles for ECharts maps
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Leaflet maps
+*
+*  Styles for Leafletjs maps
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # Chart styling
+*
+*  Charts base - container and sizing setup
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # C3 charts
+*
+*  Styles for C3.js visualization library
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+*
+*  # D3.js library
+*
+*  Basic styles for D3.js visualization library
+*
+* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Blog layouts
+ *
+ *  Blog layouts with various blog layouts
+ *
+ * ---------------------------------------------------------------------------- */
+.blog-horizontal .card-img-actions {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .blog-horizontal .card-img-actions {
+    width: 45%;
+    float: left;
+    max-width: 25rem;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 576px) {
+  .blog-horizontal-xs .card-img-actions {
+    width: 35%;
+    max-width: 12.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .blog-horizontal-sm .card-img-actions {
+    width: 40%;
+    max-width: 18.75rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .blog-horizontal-lg .card-img-actions {
+    width: 50%;
+    max-width: 31.25rem;
+  }
+}
+
+/* ------------------------------------------------------------------------------
+ *
+ *  # Mail list
+ *
+ *  Inbox page - list, read and write
+ *
+ * ---------------------------------------------------------------------------- */
+.table-inbox {
+  --inbox-read-row-bg: var(--gray-100);
+  --inbox-unread-row-bg: var(--card-bg);
+  --inbox-img-size: 2rem;
+  table-layout: fixed;
+  min-width: 768px;
+}
+.table-inbox tr {
+  cursor: pointer;
+  transition: all ease-in-out var(--transition-base-timer);
+}
+@media (prefers-reduced-motion: reduce) {
+  .table-inbox tr {
+    transition: none;
+  }
+}
+.table-inbox tr:not([class*=bg-]) {
+  background-color: var(--inbox-read-row-bg);
+}
+.table-inbox tr td:not(:first-child) {
+  padding-left: 0;
+}
+.table-inbox tr.unread {
+  font-weight: 700;
+}
+.table-inbox tr.unread:not([class*=bg-]) {
+  background-color: var(--inbox-unread-row-bg);
+}
+
+.table-inbox-checkbox {
+  width: calc(var(--table-cell-padding-x) * 3);
+}
+
+.table-inbox-star,
+.table-inbox-attachment {
+  width: calc(var(--table-cell-padding-x) + var(--icon-font-size));
+}
+
+.table-inbox-image {
+  width: calc(var(--table-cell-padding-x) + var(--inbox-img-size));
+}
+
+.table-inbox-name {
+  width: 15rem;
+}
+
+@media (max-width: 575.98px) {
+  .table-inbox-subject {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.table-inbox-time {
+  text-align: right;
+  width: 5.5rem;
+}
+
+/* ------------------------------------------------------------------------------
+ *
+ *  # User profile
+ *
+ *  Styles for all user profile layouts
+ *
+ * ---------------------------------------------------------------------------- */
+.profile-cover {
+  --profile-cover-height: 21.88rem;
+  --profile-cover-text-shadow: 0 0 0.1875rem rgba(var(--black-rgb), 0.5);
+  position: relative;
+}
+
+.profile-cover-text {
+  text-shadow: var(--profile-cover-text-shadow);
+}
+
+.profile-cover-img {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: var(--profile-cover-height);
+}
+
+/* ------------------------------------------------------------------------------
+ *
+ *  # Login and related forms
+ *
+ *  Styles related to user login - logins, registration, password revovery, unlock etc.
+ *
+ * ---------------------------------------------------------------------------- */
+.login-cover {
+  background: url(../../assets/images/login_cover.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 576px) {
+  .login-form {
+    width: 25rem;
+  }
+}
+
+/* ------------------------------------------------------------------------------
+ *
+ *  # Timeline
+ *
+ *  Styles for timeline in 3 layouts: left, right and centered
+ *
+ * ---------------------------------------------------------------------------- */
+.timeline {
+  --timeline-content-padding-x: calc(1.25rem * 2);
+  --timeline-line-width: calc(var(--border-width) * 2);
+  --timeline-line-color: var(--gray-400);
+  --timeline-icon-bg: var(--white);
+  --timeline-icon-size: 3rem;
+  --timeline-icon-border-width: calc(var(--timeline-line-width) * 2);
+  position: relative;
+}
+.timeline:before, .timeline:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: calc(var(--timeline-line-width) * -1);
+  background-color: var(--timeline-line-color);
+  z-index: 1;
+  width: calc(var(--timeline-line-width) * 2);
+  height: calc(var(--timeline-line-width) * 2);
+  border-radius: var(--border-radius-pill);
+}
+.timeline:before {
+  top: calc(var(--timeline-line-width) * 2 * -1);
+}
+.timeline:after {
+  bottom: calc(var(--timeline-line-width) * 2 * -1);
+}
+
+.timeline-container {
+  position: relative;
+  padding-top: calc(var(--spacer) * 0.5);
+  margin-top: calc(var(--spacer) * 0.5 * -1);
+  padding-bottom: 1px;
+}
+.timeline-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: calc(var(--timeline-line-width) * 0.5 * -1);
+  background-color: var(--timeline-line-color);
+  height: 100%;
+  width: var(--timeline-line-width);
+}
+
+.timeline-row {
+  position: relative;
+}
+
+.timeline-date {
+  text-align: center;
+  background-color: var(--body-bg);
+  position: relative;
+  z-index: 1;
+  padding-top: var(--spacer);
+  padding-bottom: var(--spacer);
+  margin-bottom: var(--spacer);
+}
+.timeline-date:before, .timeline-date:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: calc(var(--timeline-line-width) * -1);
+  background-color: var(--timeline-line-color);
+  z-index: 1;
+  width: calc(var(--timeline-line-width) * 2);
+  height: calc(var(--timeline-line-width) * 2);
+  border-radius: var(--border-radius-pill);
+}
+.timeline-date:before {
+  top: 0;
+}
+.timeline-date:after {
+  bottom: 0;
+}
+.card .timeline-date {
+  background-color: var(--card-bg);
+}
+
+.timeline-time {
+  text-align: center;
+  padding-top: var(--spacer);
+  padding-bottom: var(--spacer);
+  background-color: var(--body-bg);
+  position: relative;
+  margin-bottom: var(--spacer);
+}
+.timeline-time:before, .timeline-time:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: calc(var(--timeline-line-width) * -1);
+  background-color: var(--timeline-line-color);
+  width: calc(var(--timeline-line-width) * 2);
+  height: calc(var(--timeline-line-width) * 2);
+  border-radius: var(--border-radius-pill);
+}
+.timeline-time:before {
+  top: 0;
+}
+.timeline-time:after {
+  bottom: 0;
+}
+.card .timeline-time {
+  background-color: var(--card-bg);
+}
+@media (min-width: 768px) {
+  .timeline-time:before, .timeline-time:after {
+    content: none;
+  }
+}
+
+.timeline-icon {
+  margin: 0 auto var(--spacer) auto;
+  background-color: car(--timeline-icon-bg);
+  border: var(--timeline-icon-border-width) solid var(--body-bg);
+  width: var(--timeline-icon-size);
+  height: var(--timeline-icon-size);
+  border-radius: var(--border-radius-pill);
+}
+.card .timeline-icon {
+  border-color: var(--card-bg);
+}
+.timeline-icon div {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  box-shadow: 0 0 0 var(--timeline-line-width) var(--timeline-line-color) inset;
+  border-radius: var(--border-radius-pill);
+}
+.timeline-icon div[class*=bg-]:not(.bg-white):not(.bg-light):not(.bg-transparent) {
+  box-shadow: none;
+}
+.timeline-icon img {
+  width: calc(var(--timeline-icon-size) - var(--timeline-icon-border-width) * 2);
+  height: calc(var(--timeline-icon-size) - var(--timeline-icon-border-width) * 2);
+  border-radius: var(--border-radius-pill);
+}
+
+@media (min-width: 768px) {
+  .timeline-center .timeline-row-start {
+    margin-right: 50%;
+    padding-right: calc(var(--timeline-icon-size) - var(--timeline-icon-border-width));
+  }
+  .timeline-center .timeline-row-end {
+    margin-left: 50%;
+    padding-left: calc(var(--timeline-icon-size) - var(--timeline-icon-border-width));
+  }
+  .timeline-start .timeline-container:before, .timeline-start:before, .timeline-start:after,
+.timeline-start .timeline-date:before,
+.timeline-start .timeline-date:after {
+    left: calc(var(--timeline-icon-size) * 0.5);
+  }
+  .timeline-start .timeline-row,
+.timeline-start .timeline-date {
+    padding-left: calc(var(--timeline-icon-size) + var(--timeline-content-padding-x) * 0.5);
+  }
+  .timeline-end .timeline-container:before, .timeline-end:before, .timeline-end:after,
+.timeline-end .timeline-date:before,
+.timeline-end .timeline-date:after {
+    left: auto;
+    right: calc(var(--timeline-icon-size) * 0.5);
+  }
+  .timeline-end:before, .timeline-end:after,
+.timeline-end .timeline-date:before,
+.timeline-end .timeline-date:after {
+    margin-left: 0;
+    margin-right: calc(var(--timeline-line-width) * 0.5 * -1);
+  }
+  .timeline-end .timeline-row,
+.timeline-end .timeline-date {
+    padding-right: calc(var(--timeline-icon-size) + var(--timeline-content-padding-x) * 0.5);
+  }
+  .timeline-start .timeline-date,
+.timeline-end .timeline-date {
+    padding-top: calc(var(--spacer) * 0.5);
+    padding-bottom: calc(var(--spacer) * 0.5);
+  }
+  .timeline-icon {
+    position: absolute;
+    top: calc(var(--spacer) * 0.5);
+  }
+  .timeline-icon:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: calc(var(--timeline-line-width) * 0.5 * -1);
+    height: var(--timeline-line-width);
+    width: calc(var(--timeline-icon-size) * 0.5 - var(--timeline-icon-border-width) * 2);
+    background-color: var(--timeline-line-color);
+    z-index: 1;
+  }
+  .timeline-start .timeline-icon {
+    left: 0;
+  }
+  .timeline-start .timeline-icon:after {
+    left: 100%;
+    margin-left: var(--timeline-icon-border-width);
+  }
+  .timeline-end .timeline-icon {
+    right: 0;
+  }
+  .timeline-end .timeline-icon:after {
+    right: 100%;
+    margin-right: var(--timeline-icon-border-width);
+  }
+  .timeline-center .timeline-row-start .timeline-icon {
+    left: 100%;
+    margin-left: calc(var(--timeline-icon-size) * 0.5 * -1);
+  }
+  .timeline-center .timeline-row-start .timeline-icon:after {
+    right: 100%;
+    margin-right: var(--timeline-icon-border-width);
+  }
+  .timeline-center .timeline-row-end .timeline-icon {
+    right: 100%;
+    margin-right: calc(var(--timeline-icon-size) * 0.5 * -1);
+  }
+  .timeline-center .timeline-row-end .timeline-icon:after {
+    left: 100%;
+    margin-left: var(--timeline-icon-border-width);
+  }
+  .timeline-center .timeline-row-full .timeline-icon {
+    position: static;
+  }
+  .timeline-center .timeline-row-full .timeline-icon:after {
+    content: none;
+  }
+  .timeline-time {
+    padding: 0;
+    text-align: inherit;
+    background-color: transparent;
+  }
+  .timeline-time:before {
+    content: none;
+  }
+  .timeline-start .timeline-time,
+.timeline-end .timeline-time {
+    padding-top: calc(var(--spacer) * 0.5);
+    margin-bottom: var(--spacer);
+    padding-left: calc(var(--timeline-content-padding-x) * 0.5);
+  }
+  .timeline-end .timeline-time {
+    text-align: right;
+    padding-left: 0;
+    padding-right: calc(var(--timeline-content-padding-x) * 0.5);
+  }
+  .timeline-center .timeline-time,
+.timeline-center .timeline-row-full .timeline-time {
+    position: absolute;
+    left: 100%;
+    top: calc(var(--spacer) * 0.5 + var(--timeline-icon-border-width));
+    width: 100%;
+    padding-left: calc(var(--timeline-icon-size) - var(--timeline-icon-border-width));
+  }
+  .timeline-center .timeline-row-end .timeline-time,
+.timeline-center .timeline-row-full .timeline-time {
+    left: auto;
+    right: 100%;
+    padding-left: 0;
+    padding-right: calc(var(--timeline-icon-size) - var(--timeline-icon-border-width));
+    text-align: right;
+  }
+  .timeline-center .timeline-row-full .timeline-time {
+    right: 50%;
+    top: var(--timeline-icon-border-width);
+  }
+}
+/* ------------------------------------------------------------------------------
+ *
+ *  # Chat layouts
+ *
+ *  Conversation chat styles - layouts, chat elements, colors, options
+ *
+ * ---------------------------------------------------------------------------- */
+.media-chat-scrollable {
+  max-height: 32.5rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.media-chat {
+  --chat-message-padding-y: 0.625rem;
+  --chat-message-padding-x: 1rem;
+  --chat-message-bg: var(--gray-300);
+  --chat-message-color: var(--body-color);
+}
+
+@media (min-width: 576px) {
+  .media-chat-item {
+    width: 75%;
+  }
+}
+
+.media-chat-message {
+  position: relative;
+  padding: var(--chat-message-padding-y) var(--chat-message-padding-x);
+  display: inline-block;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  color: var(--chat-message-color);
+  border-radius: var(--border-radius);
+}
+.media-chat-message:not([class*=bg-]) {
+  background-color: var(--chat-message-bg);
+}
+
+.media-chat-item-reverse {
+  --chat-message-bg: var(--primary);
+  --chat-message-color: var(--white);
+  text-align: right;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.media-chat-item-reverse .media-chat-message {
+  text-align: left;
+}
+
+.typing-indicator {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.typing-indicator span {
+  height: 0.125rem;
+  width: 0.125rem;
+  margin: 0 0.0625rem;
+  background-color: var(--body-color);
+  display: block;
+  border-radius: var(--border-radius-pill);
+  opacity: 0.4;
+}
+.typing-indicator span:nth-of-type(1) {
+  -webkit-animation: 1.2s blink infinite 0.2s;
+          animation: 1.2s blink infinite 0.2s;
+}
+.typing-indicator span:nth-of-type(2) {
+  -webkit-animation: 1.2s blink infinite 0.4s;
+          animation: 1.2s blink infinite 0.4s;
+}
+.typing-indicator span:nth-of-type(3) {
+  -webkit-animation: 1.2s blink infinite 0.6s;
+          animation: 1.2s blink infinite 0.6s;
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ------------------------------------------------------------------------------
+ *
+ *  # Ribbons
+ *
+ *  Styles for ribbons - corner, vertical, horizontal
+ *
+ * ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------
+ *
+ *  # Helper classes
+ *
+ *  Custom helper classes used in the template.
+ *
+ * ---------------------------------------------------------------------------- */
+.spinner {
+  display: inline-block;
+  -webkit-animation: rotation 1s linear infinite;
+          animation: rotation 1s linear infinite;
+}
+
+.spinner-reverse {
+  display: inline-block;
+  -webkit-animation: rotation_reverse 1s linear infinite;
+          animation: rotation_reverse 1s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotation_reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+@keyframes rotation_reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+.invert-dark[data-color-theme=dark], [data-color-theme=dark] .invert-dark:not([data-color-theme]), html[data-color-theme=dark] .invert-dark {
+  color-scheme: dark;
+  -webkit-filter: invert(1) grayscale(100);
+          filter: invert(1) grayscale(100);
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------------------------
+ *
+ *  # Demo styles
+ *
+ *  Styles used for demostration purposes only
+ *
+ * ---------------------------------------------------------------------------- */

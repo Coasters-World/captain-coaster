@@ -1,80 +1,77 @@
-<!DOCTYPE html>
-<html lang="{{ app.request.get('_locale') }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ 'login.title'|trans }} • {{ 'app.name'|trans }}</title>
+{% extends 'base.html.twig' %}
 
-    <!-- Global stylesheets -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
-          type="text/css">
-    {{ encore_entry_link_tags('app') }}
-    <!-- /global stylesheets -->
-</head>
+{% block content %}
+    <div class="content d-flex justify-content-center align-items-center">
 
-<body class="login-container login-cover"
-      style="background: url({{ asset('images/backgrounds/login.jpg') }}) no-repeat; background-size: cover;">
-<!-- Page container -->
-<div class="page-container">
-    <!-- Page content -->
-    <div class="page-content">
-        <!-- Main content -->
-        <div class="content-wrapper">
-            <!-- Content area -->
-            <div class="content pb-20">
-                <!-- Form with validation -->
-                <div class="panel panel-body login-form">
-                    <div class="text-center">
-                        <div class="icon-object border-indigo-300 text-indigo-300"><i class="icon-lock"></i></div>
-                        <h5 class="content-group">{{ 'login.title'|trans }}</h5>
+        <!-- Login form -->
+        <form class="login-form" action="index.html">
+            <div class="card mb-0">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <div class="d-inline-flex align-items-center justify-content-center mb-4 mt-2">
+                            <img src="../../../assets/images/logo_icon.svg" class="h-48px" alt="">
+                        </div>
+                        <h5 class="mb-0">Login to your account</h5>
+                        <span class="d-block text-muted">Enter your credentials below</span>
                     </div>
-                    {% if error is defined and error %}
-                        <div class="alert alert-danger alert-bordered">
-                            {{ error|trans }}
+
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <div class="form-control-feedback form-control-feedback-start">
+                            <input type="text" class="form-control" placeholder="john@doe.com">
+                            <div class="form-control-feedback-icon">
+                                <i class="ph-user-circle text-muted"></i>
+                            </div>
                         </div>
-                    {% endif %}
-                    {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                        <ul class="list-inline form-group list-inline-condensed text-center">
-                            {#{% for owner in hwi_oauth_resource_owners() %}#}
-                            {% set referer = app.request.server.get('HTTP_REFERER')|default('/') %}
-                            <li class="mb-5" style="padding:0;">
-                                <a href="{{ path('connect_google_start') }}{# ?target_path={{ referer }} #}" class="btn btn-flat" style="background-color: #4267B2; color: #FFFFFF;">
-                                    <i class="icon-facebook position-left"></i> {{ 'login.facebook_connect'|trans }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ path('connect_google_start') }}" class="btn btn-flat bg-danger-800">
-                                    <i class="icon-google position-left"></i> {{ 'login.google_connect'|trans }}
-                                </a>
-                            </li>
-                            {#{% endfor %}#}
-                        </ul>
-                        <div class="content-divider text-muted form-group">
-                            <span>{{ 'login.info.title'|trans }}</span></div>
-                        <span class="help-block text-center no-margin">
-                            {{ 'login.info.text'|trans }}
-                        </span>
-                        <form action="{{ path('login_link_start') }}" method="POST">
-                            <input type="email" name="email">
-                            <button type="submit">Send Login Link</button>
-                        </form>
-                    {% else %}
-                        <div class="text-center">
-                            {{ 'login.already_connected_as'|trans }} <strong>{{ app.user.displayName }}</strong>
-                            <br/><br/>
-                            <a href="{{ path('logout') }}" class="btn btn-flat bg-indigo">{{ 'login.logout'|trans }}</a>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <div class="form-control-feedback form-control-feedback-start">
+                            <input type="password" class="form-control" placeholder="•••••••••••">
+                            <div class="form-control-feedback-icon">
+                                <i class="ph-lock text-muted"></i>
+                            </div>
                         </div>
-                    {% endif %}
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <label class="form-check">
+                            <input type="checkbox" name="remember" class="form-check-input" checked>
+                            <span class="form-check-label">Remember</span>
+                        </label>
+
+                        <a href="login_password_recover.html" class="ms-auto">Forgot password?</a>
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary w-100">Sign in</button>
+                    </div>
+
+                    <div class="text-center text-muted content-divider mb-3">
+                        <span class="px-2">or sign in with</span>
+                    </div>
+
+                    <div class="text-center mb-3">
+                        <button type="button" class="btn btn-outline-primary btn-icon rounded-pill border-width-2"><i class="ph-facebook-logo"></i></button>
+                        <button type="button" class="btn btn-outline-pink btn-icon rounded-pill border-width-2 ms-2"><i class="ph-dribbble-logo"></i></button>
+                        <button type="button" class="btn btn-outline-secondary btn-icon rounded-pill border-width-2 ms-2"><i class="ph-github-logo"></i></button>
+                        <button type="button" class="btn btn-outline-info btn-icon rounded-pill border-width-2 ms-2"><i class="ph-twitter-logo"></i></button>
+                    </div>
+
+                    <div class="text-center text-muted content-divider mb-3">
+                        <span class="px-2">Don't have an account?</span>
+                    </div>
+
+                    <div class="mb-3">
+                        <a href="#" class="btn btn-light w-100">Sign up</a>
+                    </div>
+
+                    <span class="form-text text-center text-muted">By continuing, you're confirming that you've read our <a href="#">Terms &amp; Conditions</a> and <a href="#">Cookie Policy</a></span>
                 </div>
-                <!-- /form with validation -->
             </div>
-            <!-- /content area -->
-        </div>
-        <!-- /main content -->
+        </form>
+        <!-- /login form -->
+
     </div>
-    <!-- /page content -->
-</div>
-<!-- /page container -->
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,188 @@
+{% extends 'base.html.twig' %}
+
+{% block sidebar %}
+    <div class="sidebar sidebar-dark sidebar-main sidebar-expand-lg">
+
+        <!-- Sidebar content -->
+        <div class="sidebar-content">
+
+            <!-- Sidebar header -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-body d-flex justify-content-center">
+                    <h5 class="sidebar-resize-hide flex-grow-1 my-auto">Navigation</h5>
+
+                    <div>
+                        <button type="button" class="btn btn-flat-white btn-icon btn-sm rounded-pill border-transparent sidebar-control sidebar-main-resize d-none d-lg-inline-flex">
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-flat-white btn-icon btn-sm rounded-pill border-transparent sidebar-mobile-main-toggle d-lg-none">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- /sidebar header -->
+
+
+            <!-- Main navigation -->
+            <div class="sidebar-section">
+                <ul class="nav nav-sidebar" data-nav-type="accordion">
+
+                    <!-- Main -->
+                    <li class="nav-item-header pt-0">
+                        <div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Main</div>
+                        <i class="ph-dots-three sidebar-resize-show"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../full/index.html" class="nav-link">
+                            <i class="ph-house"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <!-- Layout -->
+                    <li class="nav-item-header">
+                        <div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Layout</div>
+                        <i class="ph-dots-three sidebar-resize-show"></i>
+                    </li>
+                    <li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
+                        <a href="#" class="nav-link">
+                            <i class="ph-layout"></i>
+                            <span>Page layouts</span>
+                        </a>
+
+                        <ul class="nav-group-sub collapse show">
+                            <li class="nav-item"><a href="layout_static.html" class="nav-link">Static layout</a></li>
+                            <li class="nav-item"><a href="layout_no_header.html" class="nav-link">No header</a></li>
+                            <li class="nav-item"><a href="layout_no_footer.html" class="nav-link">No footer</a></li>
+                            <li class="nav-item-divider"></li>
+                            <li class="nav-item"><a href="layout_fixed_header.html" class="nav-link">Fixed header</a></li>
+                            <li class="nav-item"><a href="layout_fixed_footer.html" class="nav-link">Fixed footer</a></li>
+                            <li class="nav-item-divider"></li>
+                            <li class="nav-item"><a href="layout_2_sidebars_1_side.html" class="nav-link">2 sidebars on 1 side</a></li>
+                            <li class="nav-item"><a href="layout_2_sidebars_2_sides.html" class="nav-link">2 sidebars on 2 sides</a></li>
+                            <li class="nav-item"><a href="layout_3_sidebars.html" class="nav-link">3 sidebars</a></li>
+                            <li class="nav-item-divider"></li>
+                            <li class="nav-item"><a href="layout_boxed_page.html" class="nav-link">Boxed page</a></li>
+                            <li class="nav-item"><a href="layout_boxed_content.html" class="nav-link active">Boxed content</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-item-submenu">
+                        <a href="#" class="nav-link"><i class="ph-arrow-elbow-down-right"></i> <span>Menu levels</span></a>
+                        <ul class="nav-group-sub collapse">
+                            <li class="nav-item"><a href="#" class="nav-link">Second level</a></li>
+                            <li class="nav-item nav-item-submenu">
+                                <a href="#" class="nav-link">Second level with child</a>
+                                <ul class="nav-group-sub collapse">
+                                    <li class="nav-item"><a href="#" class="nav-link">Third level</a></li>
+                                    <li class="nav-item nav-item-submenu">
+                                        <a href="#" class="nav-link">Third level with child</a>
+                                        <ul class="nav-group-sub collapse">
+                                            <li class="nav-item"><a href="#" class="nav-link">Fourth level</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Fourth level</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Third level</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="#" class="nav-link">Second level</a></li>
+                        </ul>
+                    </li>
+                    <!-- /layout -->
+
+                </ul>
+            </div>
+            <!-- /main navigation -->
+
+        </div>
+        <!-- /sidebar content -->
+
+    </div>
+{% endblock %}
+
+{% block header %}
+    <div class="page-header page-header-light shadow">
+        <div class="page-header-content d-lg-flex container">
+            <div class="d-flex">
+                <h4 class="page-title mb-0">
+                    Seed - <span class="fw-normal">Boxed Content</span>
+                </h4>
+
+                <a href="#page_header" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse">
+                    <i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
+                </a>
+            </div>
+
+            <div class="collapse d-lg-block my-lg-auto ms-lg-auto" id="page_header">
+                <div class="hstack gap-3 mb-3 mb-lg-0">
+                    <button type="button" class="btn btn-primary">
+                        <i class="ph-gear me-2"></i>
+                        Button
+                    </button>
+
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
+                            Dropdown
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <button type="button" class="dropdown-item">Menu item 1</button>
+                            <button type="button" class="dropdown-item">Menu item 2</button>
+                            <button type="button" class="dropdown-item">Menu item 3</button>
+                            <div class="dropdown-divider"></div>
+                            <button type="button" class="dropdown-item">Menu item 4</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-top">
+            <div class="page-header-content d-lg-flex container">
+                <div class="d-flex">
+                    <div class="breadcrumb py-2">
+                        <a href="index.html" class="breadcrumb-item"><i class="ph-house"></i></a>
+                        <a href="#" class="breadcrumb-item">Home</a>
+                        <a href="#" class="breadcrumb-item">Link</a>
+                        <span class="breadcrumb-item active">Current</span>
+                    </div>
+
+                    <a href="#breadcrumb_elements" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse">
+                        <i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
+                    </a>
+                </div>
+
+                <div class="collapse d-lg-block ms-lg-auto" id="breadcrumb_elements">
+                    <div class="d-lg-flex mb-2 mb-lg-0">
+                        <a href="#" class="d-flex align-items-center text-body py-2">
+                            Link
+                        </a>
+
+                        <div class="dropdown ms-lg-3">
+                            <a href="#" class="d-flex align-items-center text-body dropdown-toggle py-2" data-bs-toggle="dropdown">
+                                <span class="flex-1">Dropdown</span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end w-100 w-lg-auto">
+                                <a href="#" class="dropdown-item">
+                                    Action
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    Another action
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    One more action
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    Separate action
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

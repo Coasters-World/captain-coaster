@@ -1,0 +1,21 @@
+// import Bootstrap 5
+// @import "~bootstrap/scss/bootstrap";
+
+// Import main font
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-600.css";
+
+// Import Phosphor Icons
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+i.fa, i.fa-regular, i.fa-solid {
+    font-size: 18px;
+}
+
+// Import bootstrap (modified...)
+@import './bootstrap.css';
+
+// Import Limitless CSS
+@import './bootstrap_limitless.css';
+@import './components.css';
+@import './layout.css';
